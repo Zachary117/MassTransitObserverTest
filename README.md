@@ -4,11 +4,11 @@ This project demonstrates what I see as unexpected behavior of the MassTransit I
 `dotnet run`
 
 **Description of application:**
-A MassTransit in memory message bus with an in memory scheduler is created.
-A message handler is created that always throws an exception.
-A redelivery policy of `Immediate(2)` is configured.
-A `IConsumeObserver` is connected and configured to write to console on the `PreConsume`, `PostConsume`, and `ConsumeFault` events.
-When the application runs a single message is published.
+ - A MassTransit in memory message bus with an in memory scheduler is created.
+ - A message handler is created that always throws an exception.
+ - A redelivery policy of `Immediate(2)` is configured.
+ - A `IConsumeObserver` is connected and configured to write to console on the `PreConsume`, `PostConsume`, and `ConsumeFault` events.
+ - When the application runs a single message is published.
 
 **Expected behavior:**
 The `IConsumeObserver` will report that `ConsumeFault` was called three times. Once for each consumption that failed.

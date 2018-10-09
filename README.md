@@ -14,22 +14,23 @@ This project demonstrates what I see as unexpected behavior of the MassTransit I
 The `IConsumeObserver` will report that `ConsumeFault` was called three times. Once for each consumption that failed.
 
 **Actual behavior:**
-The `IConsumeObserver` report that `ConsumeFault` is called only once. When consumption fails but all redeliveries have not been exaused, PostConsume is called instead.
+The `IConsumeObserver` reports that `ConsumeFault` is called only once. When consumption fails but all redeliveries have not been exaused, PostConsume is called instead.
 
 **Output example:**
 ```
 PreConsume
-EXCEPTION STACK TRACE
+WARNING EXCEPTION STACK TRACE IS PRINTED TO CONSOLE
 PostConsume
 PreConsume
 PostConsume
 PreConsume
-EXCEPTION STACK TRACE
+WARNING EXCEPTION STACK TRACE IS PRINTED TO CONSOLE
 PostConsume
 PreConsume
 PostConsume
 PreConsume
-EXCEPTION STACK TRACE
+WARNING EXCEPTION STACK TRACE IS PRINTED TO CONSOLE
+ERROR EXCEPTION STACK TRACE IS PRINTED TO CONSOLE
 ConsumeFault
 ```
 

@@ -14,7 +14,7 @@ namespace MTTest
     /// <inheritdoc/>
     async Task IConsumeObserver.PreConsume<T>(ConsumeContext<T> context)
     {
-      Console.ForegroundColor = ConsoleColor.Green;
+      Console.ForegroundColor = ConsoleColor.Yellow;
       await Console.Out.WriteLineAsync("PreConsume");
       Console.ForegroundColor = ConsoleColor.White;
     }

@@ -18,7 +18,7 @@ The `IConsumeObserver` report that `ConsumeFault` is called only once. When cons
 
 **Output example:**
 ```
-PreConsume`
+PreConsume
 EXCEPTION STACK TRACE
 PostConsume
 PreConsume

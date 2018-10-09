@@ -1,0 +1,6 @@
+﻿namespace MTTest
+{
+  class MyMessage
+  {
+  }
+}
